@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install Reqs",
+            "detail": "Install Reqs form requirements.txt",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": ["-m", "pip", "install", "-r", "requirements.txt"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "options": {
+                "statusbar": {
+                "color" : "#d0e7aa"
+                }
+            }
+        },
+        {
+            "label": "Generate Allure",
+            "detail": "Generate Allure report",
+            "type": "shell",
+            "command": "allure serve allure-results",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "options": {
+                "statusbar": {
+                "color" : "#d0e7aa"
+                }
+            }
+        }
+    ]
+}
